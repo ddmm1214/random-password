@@ -14,23 +14,33 @@ body {
     align-items: center;
     height: 100vh;
     padding: 20px;
+    overflow: hidden;
+}
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    background-color: #181818;
 }
 
 .container {
     display: flex;
-    width: 800px;
+    flex-wrap: wrap;
+    width: 80%;
     background-color: #242424;
     border-radius: 12px;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
 }
 
 .settings, .result {
-    padding: 40px;
-    flex: 1;
-}
-
-.settings {
-    border-right: 1px solid #333;
+    padding: 20px;
+    flex: 1 1 50%;
+    min-width: 300px;
 }
 
 h1, h2 {
@@ -95,4 +105,22 @@ button:hover {
     font-size: 18px;
     word-wrap: break-word;
     color: #ffffff;
+}
+
+.password-strength {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #bbbbbb;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .settings, .result {
+        padding: 20px 10px;
+    }
 }
