@@ -11,7 +11,7 @@ function generateRandomPassword(length, includeUppercase, includeLowercase, incl
     if (includeSymbols) charSet += symbolChars;
 
     if (charSet === '') {
-        return 'Please select at least one character set.';
+        return '请选择至少一个字符集。';
     }
 
     let password = '';
