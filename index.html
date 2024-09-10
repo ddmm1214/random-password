@@ -1,44 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random Password Generator</title>
+    <title>随机密码生成器</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>Generate a Random Password</h1>
-        
-        <div class="input-group">
-            <label for="length">Password Length</label>
-            <input type="number" id="length" min="6" max="32" value="12">
-        </div>
-        
-        <div class="input-group">
-            <label for="uppercase">Include Uppercase Letters</label>
-            <input type="checkbox" id="uppercase" checked>
-        </div>
-        
-        <div class="input-group">
-            <label for="lowercase">Include Lowercase Letters</label>
-            <input type="checkbox" id="lowercase" checked>
-        </div>
-        
-        <div class="input-group">
-            <label for="numbers">Include Numbers</label>
-            <input type="checkbox" id="numbers" checked>
-        </div>
-        
-        <div class="input-group">
-            <label for="symbols">Include Symbols</label>
-            <input type="checkbox" id="symbols" checked>
-        </div>
+        <div class="settings">
+            <h1>随机密码生成器</h1>
+            
+            <div class="input-group">
+                <label for="length">密码长度</label>
+                <input type="number" id="length" min="6" max="32" value="12">
+            </div>
+            
+            <div class="input-group">
+                <label for="uppercase">包含大写字母</label>
+                <input type="checkbox" id="uppercase" checked>
+            </div>
+            
+            <div class="input-group">
+                <label for="lowercase">包含小写字母</label>
+                <input type="checkbox" id="lowercase" checked>
+            </div>
+            
+            <div class="input-group">
+                <label for="numbers">包含数字</label>
+                <input type="checkbox" id="numbers" checked>
+            </div>
+            
+            <div class="input-group">
+                <label for="symbols">包含符号</label>
+                <input type="checkbox" id="symbols" checked>
+            </div>
 
-        <button id="generateBtn">Generate Password</button>
+            <button id="generateBtn">生成密码</button>
+        </div>
         
-        <div class="password-output">
-            <p id="passwordDisplay">Your password will appear here</p>
+        <div class="result">
+            <h2>生成的密码</h2>
+            <div class="password-output">
+                <p id="passwordDisplay">在此处显示密码</p>
+            </div>
         </div>
     </div>
     
