@@ -7,26 +7,35 @@
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    background-color: #f5f5f7;
+    background-color: #181818;
+    color: #e1e1e1;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    padding: 20px;
 }
 
 .container {
-    background-color: white;
-    padding: 40px;
+    display: flex;
+    width: 800px;
+    background-color: #242424;
     border-radius: 12px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-    width: 350px;
-    text-align: center;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
 }
 
-h1 {
-    font-size: 24px;
-    margin-bottom: 30px;
-    color: #1d1d1f;
+.settings, .result {
+    padding: 40px;
+    flex: 1;
+}
+
+.settings {
+    border-right: 1px solid #333;
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+    color: #ffffff;
 }
 
 .input-group {
@@ -35,7 +44,7 @@ h1 {
 
 label {
     font-size: 16px;
-    color: #6e6e73;
+    color: #bbbbbb;
     display: block;
     margin-bottom: 5px;
 }
@@ -43,8 +52,10 @@ label {
 input[type="number"], input[type="checkbox"] {
     padding: 10px;
     font-size: 16px;
-    border: 1px solid #d1d1d6;
+    border: 1px solid #555;
     border-radius: 8px;
+    background-color: #333;
+    color: #e1e1e1;
     width: 100%;
     box-sizing: border-box;
     margin-bottom: 10px;
@@ -73,15 +84,15 @@ button:hover {
 }
 
 .password-output {
-    margin-top: 30px;
-    padding: 10px;
-    border: 1px solid #e5e5e5;
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #333;
     border-radius: 8px;
-    background-color: #f9f9f9;
+    background-color: #333;
 }
 
 #passwordDisplay {
     font-size: 18px;
     word-wrap: break-word;
-    color: #333;
+    color: #ffffff;
 }
