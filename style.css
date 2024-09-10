@@ -44,6 +44,7 @@ canvas {
     padding: 20px;
     flex: 1; /* 调整 flex 属性 */
     min-width: 300px;
+    overflow-y: auto; /* 添加垂直滚动 */
 }
 
 h1, h2 {
@@ -132,5 +133,12 @@ button:hover {
 @media (max-width: 480px) {
     .container {
         width: 95%; /* 调整宽度 */
+    }
+}
+
+/* 添加垂直滚动 */
+@media (max-width: 768px) {
+    .settings, .result {
+        overflow-y: auto;  /* 添加垂直滚动 */
     }
 }
