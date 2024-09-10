@@ -149,4 +149,15 @@ button:hover {
     .input-group input {
         width: 100%; 
     }
+    
+  /* 让第一个 input-group 独占一行 */
+  .settings > .input-group:first-child {
+  flex-basis: 100%; /* 占据整行宽度 */
+  margin-bottom: 20px; /* 增加第一个元素的底部间距 */
+  }
+
+  /* 调整第二个 input-group 的宽度，使其填充剩余空间 */
+  .settings > .input-group:nth-child(2) {
+  flex-basis: 50%; /* 占据剩余空间 */
+  }
 }
