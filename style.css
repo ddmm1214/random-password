@@ -10,7 +10,6 @@ body {
     background-color: #181818;
     color: #e1e1e1;
     display: flex;
-    flex-direction: column; /* 调整为列布局 */
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -30,21 +29,18 @@ canvas {
 
 .container {
     display: flex;
-    flex-direction: column; /* 调整为列布局 */
-    width: 90%; /* 调整宽度 */
-    max-width: 800px; /* 设置最大宽度 */
+    flex-wrap: wrap;
+    width: 80%;
     background-color: #242424;
     border-radius: 12px;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
     overflow: hidden;
-    margin-bottom: 20px; /* 添加底部间距 */
 }
 
 .settings, .result {
     padding: 20px;
-    flex: 1; /* 调整 flex 属性 */
+    flex: 1 1 50%;
     min-width: 300px;
-    overflow-y: auto; /* 添加垂直滚动 */
 }
 
 h1, h2 {
@@ -120,25 +116,14 @@ button:hover {
 /* 响应式设计 */
 @media (max-width: 768px) {
     .container {
-        flex-direction: column; /* 调整为列布局 */
-        width: 90%; /* 调整宽度 */
-        max-width: 800px; /* 设置最大宽度 */
+        flex-direction: column;
+        width: 100%;
+        height: auto; /* 调整容器高度 */
     }
 
     .settings, .result {
         padding: 20px 10px;
+        height: auto; /* 调整元素高度 */
     }
 }
 
-@media (max-width: 480px) {
-    .container {
-        width: 95%; /* 调整宽度 */
-    }
-}
-
-/* 添加垂直滚动 */
-@media (max-width: 768px) {
-    .settings, .result {
-        overflow-y: auto;  /* 添加垂直滚动 */
-    }
-}
