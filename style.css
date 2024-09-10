@@ -35,6 +35,7 @@ canvas {
     border-radius: 12px;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
     overflow: hidden;
+    flex-direction: row; /* 默认情况下，横向排列 */
 }
 
 .settings, .result {
@@ -113,7 +114,7 @@ button:hover {
     color: #bbbbbb;
 }
 
-/* 移动设备全屏铺满 */
+/* 移动设备全屏铺满，且模块竖直排列 */
 @media (max-width: 768px) {
     body {
         padding: 0;
@@ -123,6 +124,11 @@ button:hover {
         width: 100%;
         height: 100%;
         border-radius: 0;
-        flex-direction: column;
+        flex-direction: column;  /* 在手机设备上，竖直排列 */
+    }
+
+    .settings, .result {
+        padding: 20px 10px;
+        min-width: 100%;  /* 在手机设备上，模块宽度设置为100% */
     }
 }
