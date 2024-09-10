@@ -1,10 +1,4 @@
-/* 全局设置 */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* 全局样式 */
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     background-color: #181818;
@@ -35,97 +29,18 @@ canvas {
     border-radius: 12px;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
     overflow: hidden;
-    margin-top: 40px;  /* 添加顶部间距 */  
-    margin-bottom: 40px; /* 添加底部间距 */
 }
 
-.settings, .result {
-    padding: 20px;
-    flex: 1 1 50%;
-    min-width: 300px;
-}
-
-h1, h2 {
-    margin-bottom: 20px;
-    color: #ffffff;
-}
-
-.input-group {
-    margin-bottom: 20px;
-}
-
-label {
-    font-size: 16px;
-    color: #bbbbbb;
-    display: block;
-    margin-bottom: 5px;
-}
-
-input[type="number"], input[type="checkbox"] {
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #555;
-    border-radius: 8px;
-    background-color: #333;
-    color: #e1e1e1;
-    width: 100%;
-    box-sizing: border-box;
-    margin-bottom: 10px;
-}
-
-input[type="checkbox"] {
-    width: auto;
-    margin-left: 5px;
-}
-
-button {
-    background-color: #0070f3;
-    color: white;
-    padding: 12px;
-    font-size: 16px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    width: 100%;
-    margin-top: 20px;
-}
-
-button:hover {
-    background-color: #005bb5;
-}
-
-.password-output {
-    margin-top: 20px;
-    padding: 20px;
-    border: 1px solid #333;
-    border-radius: 8px;
-    background-color: #333;
-}
-
-#passwordDisplay {
-    font-size: 18px;
-    word-wrap: break-word;
-    color: #ffffff;
-}
-
-.password-strength {
-    margin-top: 10px;
-    font-size: 14px;
-    color: #bbbbbb;
-}
-
-/* 响应式设计 */
+/* 移动设备全屏铺满 */
 @media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        width: 100%;
-        height: auto; /* 调整容器高度 */
+    body {
+        padding: 0;
     }
-
-    .settings, .result {
-        padding: 20px 10px;
-        height: auto; /* 调整元素高度 */
+    
+    .container {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        flex-direction: column;
     }
 }
-
