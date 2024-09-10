@@ -35,8 +35,7 @@ canvas {
     border-radius: 12px;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
     overflow: hidden;
-    flex-direction: row; /* 默认情况下，横向排列 */
-    min-height: auto; /* 移除 height: 100%, 避免高度问题 */
+    flex-direction: row;
 }
 
 .settings, .result {
@@ -125,12 +124,29 @@ button:hover {
         width: 100%;
         border-radius: 0;
         flex-direction: column;  /* 在手机设备上，竖直排列 */
-        min-height: 100vh; /* 确保容器高度足够 */
+        min-height: 100vh;
     }
 
     .settings, .result {
         padding: 20px 10px;
         min-width: 100%;  /* 在手机设备上，模块宽度设置为100% */
-        flex-grow: 1; /* 让设置和结果部分可以根据剩余空间调整高度 */
+        flex-grow: 1;
+    }
+
+    /* 设置 input-group 横向排列 */
+    .settings {
+        display: flex;
+        flex-wrap: wrap; /* 允许换行 */
+        gap: 10px; /* 每个 input-group 之间的间距 */
+    }
+
+    .input-group {
+        flex-basis: 48%; /* 让每个 input-group 占据 48%，确保两个一排 */
+        margin-bottom: 10px; /* 下方留出空间，避免元素挤在一起 */
+    }
+
+    /* 确保宽度充足时，input-group占据一整行 */
+    .input-group input {
+        width: 100%; 
     }
 }
