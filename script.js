@@ -23,6 +23,37 @@ function generateRandomPassword(length, includeUppercase, includeLowercase, incl
     return password;
 }
 
+function checkPasswordStrength(password) {
+    let strength = 0;
+    if (password.length >= 8) strength++;
+    if (/[A-Z]/.test(password)) strength++;
+    if (/[a-z]/.test(password)) strength++;
+    if (/[0-9]/.test(password)) strength++;
+    if (/[\W_]/.test(password)) strength++;
+    
+    let strengthText = '';
+    switch (strength) {
+        case 0:
+        case 1:
+            strengthText = '非常弱';
+            break;
+        case 2:
+            strengthText = '弱';
+            break;
+        case 3:
+            strengthText = '中';
+            break;
+        case 4:
+            strengthText = '强';
+            break;
+        case 5:
+            strengthText = '非常强';
+            break;
+    }
+
+    document.getElementById('passwordStrength').textContent = `密码强度: ${strengthText}`;
+}
+
 document.getElementById('generateBtn').addEventListener('click', () => {
     const length = parseInt(document.getElementById('length').value, 10);
     const includeUppercase = document.getElementById('uppercase').checked;
@@ -32,4 +63,5 @@ document.getElementById('generateBtn').addEventListener('click', () => {
 
     const password = generateRandomPassword(length, includeUppercase, includeLowercase, includeNumbers, includeSymbols);
     document.getElementById('passwordDisplay').textContent = password;
+    checkPasswordStrength(password);
 });
