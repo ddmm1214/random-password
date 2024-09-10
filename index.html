@@ -8,12 +8,40 @@
 </head>
 <body>
     <div class="container">
-        <h1>Random Password Generator</h1>
-        <label for="length">Password Length:</label>
-        <input type="number" id="length" min="6" max="32" value="12">
+        <h1>Generate a Random Password</h1>
+        
+        <div class="input-group">
+            <label for="length">Password Length</label>
+            <input type="number" id="length" min="6" max="32" value="12">
+        </div>
+        
+        <div class="input-group">
+            <label for="uppercase">Include Uppercase Letters</label>
+            <input type="checkbox" id="uppercase" checked>
+        </div>
+        
+        <div class="input-group">
+            <label for="lowercase">Include Lowercase Letters</label>
+            <input type="checkbox" id="lowercase" checked>
+        </div>
+        
+        <div class="input-group">
+            <label for="numbers">Include Numbers</label>
+            <input type="checkbox" id="numbers" checked>
+        </div>
+        
+        <div class="input-group">
+            <label for="symbols">Include Symbols</label>
+            <input type="checkbox" id="symbols" checked>
+        </div>
+
         <button id="generateBtn">Generate Password</button>
-        <p id="passwordDisplay"></p>
+        
+        <div class="password-output">
+            <p id="passwordDisplay">Your password will appear here</p>
+        </div>
     </div>
+    
     <script src="script.js"></script>
 </body>
 </html>
