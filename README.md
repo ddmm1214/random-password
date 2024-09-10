@@ -30,6 +30,6 @@
 
 1. **克隆项目**：
    ```bash
-   git clone https://github.com/your-username/random-password-generator.git
+   git clone (https://github.com/ddmm1214/random-password.git)
 2. **部署**：
 项目已使用 [Vercel](https://vercel.com) 部署，持续集成支持自动部署。
